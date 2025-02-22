@@ -1,0 +1,111 @@
+/* Fond de la page */
+body {
+    background-color: white; /* Fond de la page en blanc */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Conteneur principal pour centrer le tableau */
+.container {
+    background-color: #e6f7ff; /* Bleu clair pour la liste des candidats */
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1000px;
+    
+}
+
+.container h1{
+    padding-left: 350px;
+}
+
+/* Style du tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white; /* Fond du tableau en blanc */
+}
+
+/* Style des cellules du tableau */
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Style des en-têtes du tableau */
+th {
+    background-color: #4da6ff; /* Bleu clair */
+    color: white;
+    font-weight: bold;
+}
+
+/* Alternance des couleurs des lignes */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Style des boutons d'action */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Style du bouton Détails */
+.details-button {
+    background-color: #4da6ff; /* Bleu clair */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.details-button:hover {
+    background-color: #3399ff; /* Bleu un peu plus foncé au survol */
+}
+
+/* Style du bouton Supprimer */
+.delete-button {
+    background-color: hsl(0, 45%, 58%); /* Rouge sombre */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.delete-button:hover {
+    background-color: #6B0000; /* Rouge encore plus sombre au survol */
+}
+
+/* Style du bouton Retour */
+.back-button {
+    background-color: #4da6ff; /* Bleu clair */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.back-button:hover {
+    background-color: #3399ff; /* Bleu un peu plus foncé au survol */
+}

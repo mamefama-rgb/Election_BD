@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des candidats validés</title>
+    <style>
+        /* Style global de la page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd; /* Bleu clair */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        /* Titre */
+        h1 {
+            color: #0d47a1; /* Bleu foncé */
+            margin-bottom: 20px;
+        }
+
+        /* Formulaire */
+        form {
+            margin-bottom: 15px;
+        }
+
+        /* Boutons */
+        input[type="submit"], .back-button {
+            background-color: #4da6ff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover, .back-button:hover {
+            background-color: #4da6ff; /* Bleu plus clair */
+        }
+    </style>
+</head>
+<body>
+    
+
+    <!-- Formulaire pour afficher la liste -->
+    <form action="liste.php" method="post">
+        <input type="submit" value="Afficher la liste des candidats">
+    </form>
+
+    <!-- Bouton Retour -->
+    <button class="back-button" onclick="window.location.href='index.html'">Retour</button>
+</body>
+</html>

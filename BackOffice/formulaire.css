@@ -1,0 +1,109 @@
+/* Fond de la page */
+body {
+    background-color: #e6f7ff; /* Bleu clair pour le fond de la page */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Conteneur principal */
+.container {
+    background-color: #ffffff; /* Fond blanc pour le formulaire */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Titre du formulaire */
+h1 {
+    color: #004080; /* Bleu foncé pour le titre */
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Style des labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #004080; /* Bleu foncé pour le texte */
+    font-size: 16px;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Style des champs de saisie */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="url"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Style du bouton */
+input[type="submit"] {
+    background-color: #4da6ff; /* Bleu clair pour le bouton */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+/* Effet au survol du bouton */
+input[type="submit"]:hover {
+    background-color: #3399ff; /* Bleu un peu plus foncé au survol */
+}
+
+/* Style pour le champ de texte (textarea) */
+textarea {
+    resize: vertical; /* Permet à l'utilisateur de redimensionner verticalement */
+    min-height: 80px; /* Hauteur réduite pour le champ Slogan */
+}
+
+/* Style pour le champ de fichier (input file) */
+input[type="file"] {
+    padding: 8px;
+}
+
+/* Style pour les groupes de champs */
+.form-group {
+    margin-bottom: 20px;
+}
+.container h1{
+    background-color: #3399ff;
+}
+
+/* Style pour les champs en ligne */
+.form-group.inline {
+    display: flex;
+    gap: 10px;
+}
+
+.form-group.inline label {
+    flex: 1;
+}
+
+.form-group.inline input {
+    flex: 2;
+}
+/* Style du bouton Retour */

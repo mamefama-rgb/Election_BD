@@ -1,0 +1,59 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Conteneur */
+.container {
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Titre */
+h1 {
+    
+    background-color: deepskyblue;
+    padding-bottom: 10px;
+}
+
+/* Zone du code généré */
+.code-box {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    background: #e6f2ff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    display: inline-block;
+}
+
+/* Bouton retour */
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: linear-gradient(45deg, #4da6ff, #ff6666);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ff6666, #4da6ff);
+    transform: scale(1.05);
+}

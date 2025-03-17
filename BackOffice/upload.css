@@ -1,0 +1,80 @@
+/* Fond de la page */
+body {
+    background-color: #e6f7ff; /* Bleu clair pour le fond de la page */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Conteneur principal */
+.container {
+    background-color: #ffffff; /* Fond blanc pour le formulaire */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Titre du formulaire */
+h1 {
+    color: #004080; /* Bleu foncé pour le titre */
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Style des champs de saisie */
+input[type="file"],
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Style des boutons */
+button {
+    background-color: #4da6ff; /* Bleu clair pour le bouton */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Effet au survol du bouton */
+button:hover {
+    background-color: #3399ff; /* Bleu un peu plus foncé au survol */
+}
+
+/* Style pour le message */
+.message {
+    font-size: 16px;
+    color: #004080;
+    margin-top: 20px;
+}
+
+/* Style du champ de texte (checksum) */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}

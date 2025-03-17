@@ -1,0 +1,67 @@
+<div class="container">
+    <h1><b>Chargement des Electeurs</b></h1>
+    <link rel="stylesheet" href="upload.css">
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <input type="file" id="fileInput" name="file" accept=".csv" required />
+        <input type="text" id="checksumInput" name="checksum" placeholder="" required /><br>
+        <button type="button" id="calculateChecksum">Calculer Checksum</button><br><br>
+        <button type="submit" id="uploadForm">Charger le Fichier</button>
+    </form>
+    <div class="message" id="message"></div>
+</div>
+<script>
+    document.getElementById('calculateChecksum').addEventListener('click', async () => {
+        const fileInput = document.getElementById('fileInput');
+        const checksumInput = document.getElementById('checksumInput');
+
+        if (fileInput.files.length === 0) {
+            alert("Veuillez sélectionner un fichier.");
+            return;
+        }
+
+        const file = fileInput.files[0];
+        const arrayBuffer = await file.arrayBuffer();
+        const hashBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+        checksumInput.value = hashHex; // Affiche le checksum dans le champ
+    });
+    
+    document.getElementById('uploadForm').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Empêche le rechargement de la page
+
+    const fileInput = document.getElementById('fileInput');
+    const checksumInput = document.getElementById('checksumInput').value;
+    const messageDiv = document.getElementById('message');
+
+    const file = fileInput.files[0];
+    if (!file) {
+        messageDiv.textContent = 'Veuillez sélectionner un fichier.';
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('checksum', checksumInput);
+
+    try {
+        // Utilisez le nom du fichier directement
+        const response = await fetch('import_fichier.php', {
+            method: 'POST',
+            body: formData,
+        });
+        const data = await response.json();
+
+        if (data.success) {
+            messageDiv.textContent = 'Fichier chargé avec succès !';
+        } else {
+            messageDiv.textContent = `Erreur : ${data.error}`;
+        }
+    } catch (error) {
+        messageDiv.textContent = 'Une erreur est survenue lors du chargement du fichier.';
+    }
+});
+</script>
+ <!-- Bouton Retour -->
+ <button class="back-button" onclick="window.history.back();">Retour</button>

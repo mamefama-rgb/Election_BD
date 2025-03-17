@@ -1,0 +1,80 @@
+/* Fond de la page */
+body {
+    background-color: #e6f7ff; /* Bleu clair */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Conteneur principal */
+.container {
+    background-color: #ffffff; /* Fond blanc */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Titre */
+h1 {
+    color: white;
+    background-color: #3399ff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Style des labels */
+label {
+    display: block;
+    margin-top: 15px;
+    color: #004080; /* Bleu foncé */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Style des champs de saisie */
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Style du bouton */
+button {
+    background-color: #4da6ff; /* Bleu clair */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Effet au survol du bouton */
+button:hover {
+    background-color: #3399ff; /* Bleu plus foncé */
+}
+
+/* Messages d'erreur */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
